@@ -25,7 +25,7 @@
         <button id="search-button">Search</button>
     </div>    
     <div id="search-results" class="search-results"></div>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery-item">
             <img src="image/image1.jpg" alt="Artwork 1" width="400" height="400">
             <h3>Mona Lisa: By Leonardo da Vinci, 1503–19</h3>
@@ -132,134 +132,23 @@
         </div>
     </footer>    
 <script>
-    const artworks = [
-    {
-        imageUrl: "image/image1.jpg",
-        title: "Mona Lisa: By Leonardo da Vinci, 1503–19",
-        artist: "John Deo",
-        price: "$500"
-    },
-    {
-        imageUrl: "image/image2.jpg",
-        title: "The Starry Night: By Vincent van Gogh, 1889",
-        artist: "Mohit Singh Rajput",
-        price: "$100"
-    },
-    {
-        imageUrl: "image/image3.jpg",
-        title: "The Last Supper",
-        artist: "Henry Patrick",
-        price: "$98"
-    },
-    {
-        imageUrl: "image/image4.jpg",
-        title: "The Bonds of Earth",
-        artist: "Darwin Skylark",
-        price: "$198"
-    },
-    {
-        imageUrl: "image/image5.jpg",
-        title: "Masterpiece",
-        artist: "Seimen lain",
-        price: "$246"
-    },
-    {
-        imageUrl: "image/image6.jpg",
-        title: "A silent Voice",
-        artist: "Gigi Hagid",
-        price: "$150"
-    },
-    {
-        imageUrl: "image/image7.jpg",
-        title: "Bonfire",
-        artist: "Snehal Ranvijay",
-        price: "$150"
-    },
-    {
-        imageUrl: "image/image8.jpg",
-        title: "Sunset",
-        artist: "Jasmeet Singh",
-        price: "$51"
-    },
-    {
-        imageUrl: "image/image9.jpg",
-        title: "Car",
-        artist: "Hardeep Singh",
-        price: "$102"
-    },
-    {
-        imageUrl: "image/image10.jpg",
-        title: "Toy",
-        artist: "Mathilde Philips",
-        price: "$345"
-    },
-    {
-        imageUrl: "image/image11.jpg",
-        title: "Drop",
-        artist: "Shakira Jene",
-        price: "$99"
-    },
-    {
-        imageUrl: "image/image12.jpg",
-        title: "Floor",
-        artist: "Fedrick keit",
-        price: "$251"
-    }
-];
-const gallery = document.querySelector('.gallery');
-artworks.forEach((artwork, index) => {
-    const galleryItem = document.createElement('div');
-    galleryItem.classList.add('gallery-item');
-    const image = document.createElement('img');
-    image.src = artwork.imageUrl;
-    image.alt = artwork.title;
-    const title = document.createElement('h3');
-    title.textContent = artwork.title;
-    const artist = document.createElement('p');
-    artist.textContent = `By ${artwork.artist}`;
-    const price = document.createElement('p');
-    price.textContent = artwork.price;
-    galleryItem.appendChild(image);
-    galleryItem.appendChild(title);
-    galleryItem.appendChild(artist);
-    galleryItem.appendChild(price);
-    gallery.appendChild(galleryItem);
-});
-const searchInput = document.getElementById('search-input');
-const searchResults = document.getElementById('search-results');
-const galleryItems = document.querySelectorAll('.gallery-item');
-function performSearch() {
-    const searchTerm = searchInput.value.toLowerCase();
-    searchResults.innerHTML = '';
-    galleryItems.forEach((item) => {
-        const title = item.querySelector('h3').textContent.toLowerCase();
-        if (title.includes(searchTerm)) {
-            const itemCopy = item.cloneNode(true);
-            const image = itemCopy.querySelector('img');
-            image.width = 400; 
-            image.height = 400; 
-            searchResults.appendChild(itemCopy);
+const gallery = document.getElementById('gallery');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResults = document.getElementById('search-results');
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            searchResults.innerHTML = ''; 
+            Array.from(gallery.children).forEach((item) => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    const itemCopy = item.cloneNode(true);
+                    searchResults.appendChild(itemCopy);
+                }
+            });
         }
-    });
-}
-document.getElementById('search-button').addEventListener('click', performSearch);
-searchInput.addEventListener('input', performSearch);
-const buyButtons = document.querySelectorAll('.buy-button');
-buyButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        window.location.href = 'shop.html';
-    });
-});
-galleryItems.forEach((item) => {
-    const title = item.querySelector('h3').textContent.toLowerCase();
-    if (title.includes(searchTerm)) {
-        const itemCopy = item.cloneNode(true);
-        const image = itemCopy.querySelector('img');
-        image.width = 400;
-        image.height = 400;
-        searchResults.appendChild(itemCopy);
-    }
-});
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('input', performSearch);
 </script>
 </body>
 </html>
