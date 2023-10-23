@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleh.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Virtual Art Gallery</title>
+    <style>
+        .header-animation {
+            text-align: center;
+            margin: 20px 0;
+            animation: scale 3s infinite;
+        }
+        @keyframes scale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        #bg-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+        }
+        #virtual{
+            text-align: center;
+        }   
+    </style>
+</head>
+<body>
+    <div id="bg-wrap">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+        </defs>
+        <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+        <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+        <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
+        </rect>-->
+        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+        </rect>
+        </svg>
+    </div>
+    <header>
+        <h1 id="virtual">Virtual Art Gallery</h1>
+        <div class="header-buttons">
+            <button id="login-button"><a href="login.html">Login</a></button>
+            <button id="signup-button" style="margin-left: 10px;"><a href="signup.html">Sign Up</a></button>
+        </div>        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="artist.html"><i class="fas fa-users"></i> Artists</a></li>
+            <li><a href="home.html"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="shop.html"><i class="fas fa-shopping-cart"></i> Payment</a></li>
+        </ul>
+    </nav>
+    <section class="home-quote">
+        <div class="header-animation">
+            <h1 style="font-size: 3.5em;">Explore the modern artworks for your modern world</h1>
+        </div>
+        <div class="quote">
+            <p><i><b>"Your creative expression is a reflection of your inner self"</b></i></p>
+        </div>
+    </section>
+    <h2>Reviews !!!<i class="fas fa-heart" style="color: red;"></i></h2>
+    <div class="program notice-box">
+        <h3>Skylark</h3>
+        <p>Exhibition for traditional Artwork</p>
+        <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    </div>
+    <div class="program notice-box">
+        <h3>Artiactic</h3>
+        <p>Art for Charcoal & Canvas</p>
+        <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>
+    </div>
+    <h2>Gallery Programs</h2>
+    <section class="gallery-programs">
+        <div class="program notice-box">
+            <h3>Art Exhibition</h3>
+            <p>Join us for our latest art exhibition featuring renowned artists from around the world.</p>
+            <p>Date: January 15, 2024</p>
+        </div>
+        <div class="program notice-box">
+            <h3>Workshops</h3>
+            <p>Participate in our art workshops to learn and improve your creative skills.</p>
+            <p>Date: December 5, 2023</p>
+        </div>
+    </section>    
+    <section class="subscription">
+        <div class="subscription-form">
+            <input type="email" id="email-input" placeholder="Enter your email...">
+            <button id="subscribe-button">Subscribe</button>
+        </div>
+        <footer>
+            <div class="footer-contact">
+                <p>Contact Us:</p>
+                <p>Email: baljeetsingh0941@gmail.com</p>
+                <p>Phone: +91 883-929-1761 </p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Virtual Art Gallery</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Issues & Complaints</a>
+            </div>
+        </footer>    
+</body>
+</html>
+

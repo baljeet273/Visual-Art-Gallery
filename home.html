@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Virtual Art Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Virtual Art Gallery</h1>
+        <button id="menu-button" class="menu-button"><i class="fas fa-bars"></i></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="artist.html"><i class="fas fa-users"></i> Artists</a></li>
+            <li><a href="shop.html"><i class="fas fa-shopping-cart"></i> Payment</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for art projects...">
+        <button id="search-button">Search</button>
+    </div>    
+    <div id="search-results" class="search-results"></div>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="image/image1.jpg" alt="Artwork 1" width="400" height="400">
+            <h3>Mona Lisa: By Leonardo da Vinci, 1503–19</h3>
+            <p>John Deo</p>
+            <p>$500</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image2.jpg" alt="Artwork 2" width="400" height="400">
+            <h3>The Starry Night: By Vincent van Gogh, 1889</h3>
+            <p>Mohit Singh Rajput</p>
+            <p>$100</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image3.jpg" alt="Artwork 3" width="400" height="400">
+            <h3>The Last Supper</h3>
+            <p>Henry Patrick</p>
+            <p>$98</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image4.jpg" alt="Artwork 4" width="400" height="400">
+            <h3>The Bonds of Earth</h3>
+            <p>Darwin Skylark </p>
+            <p>$198</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image5.jpg" alt="Artwork 5" width="400" height="400">
+            <h3>Masterpiece</h3>
+            <p>Seimen lain</p>
+            <p>$246</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image6.jpg" alt="Artwork 6" width="400" height="400">
+            <h3>A silent Vioce</h3>
+            <p>Gigi Hagid</p>
+            <p>$150</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image7.jpg" alt="Artwork 7" width="400" height="400">
+            <h3>Bonfire</h3>
+            <p>Snehal Ranvijay</p>
+            <p>$150</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image8.jpg" alt="Artwork 8" width="400" height="400">
+            <h3>Sunset</h3>
+            <p>Jasmeet Singh</p>
+            <p>$51</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image9.jpg" alt="Artwork 9" width="400" height="400">
+            <h3>Car</h3>
+            <p>Hardeep Singh</p>
+            <p>$102</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image10.jpg" alt="Artwork 10" width="400" height="400">
+            <h3>Toy</h3>
+            <p>Mathilde Philips </p>
+            <p>$345</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image11.jpg" alt="Artwork 5" width="400" height="400">
+            <h3>Drop</h3>
+            <p>Shakira Jene</p>
+            <p>$99</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+        <div class="gallery-item">
+            <img src="image/image12.jpg" alt="Artwork 5" width="400" height="400">
+            <h3>Floor</h3>
+            <p>Fedrick keit</p>
+            <p>$251</p>
+            <button class="buy-button">&#x2665; Buy</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-contact">
+            <p>Contact Us:</p>
+            <p>Email: baljeetsingh0941@gmail.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2023 Virtual Art Gallery</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Help</a>
+            <a href="#">Issues & Complaints</a>
+        </div>
+    </footer>    
+<script>
+    const artworks = [
+    {
+        imageUrl: "image/image1.jpg",
+        title: "Mona Lisa: By Leonardo da Vinci, 1503–19",
+        artist: "John Deo",
+        price: "$500"
+    },
+    {
+        imageUrl: "image/image2.jpg",
+        title: "The Starry Night: By Vincent van Gogh, 1889",
+        artist: "Mohit Singh Rajput",
+        price: "$100"
+    },
+    {
+        imageUrl: "image/image3.jpg",
+        title: "The Last Supper",
+        artist: "Henry Patrick",
+        price: "$98"
+    },
+    {
+        imageUrl: "image/image4.jpg",
+        title: "The Bonds of Earth",
+        artist: "Darwin Skylark",
+        price: "$198"
+    },
+    {
+        imageUrl: "image/image5.jpg",
+        title: "Masterpiece",
+        artist: "Seimen lain",
+        price: "$246"
+    },
+    {
+        imageUrl: "image/image6.jpg",
+        title: "A silent Voice",
+        artist: "Gigi Hagid",
+        price: "$150"
+    },
+    {
+        imageUrl: "image/image7.jpg",
+        title: "Bonfire",
+        artist: "Snehal Ranvijay",
+        price: "$150"
+    },
+    {
+        imageUrl: "image/image8.jpg",
+        title: "Sunset",
+        artist: "Jasmeet Singh",
+        price: "$51"
+    },
+    {
+        imageUrl: "image/image9.jpg",
+        title: "Car",
+        artist: "Hardeep Singh",
+        price: "$102"
+    },
+    {
+        imageUrl: "image/image10.jpg",
+        title: "Toy",
+        artist: "Mathilde Philips",
+        price: "$345"
+    },
+    {
+        imageUrl: "image/image11.jpg",
+        title: "Drop",
+        artist: "Shakira Jene",
+        price: "$99"
+    },
+    {
+        imageUrl: "image/image12.jpg",
+        title: "Floor",
+        artist: "Fedrick keit",
+        price: "$251"
+    }
+];
+const gallery = document.querySelector('.gallery');
+artworks.forEach((artwork, index) => {
+    const galleryItem = document.createElement('div');
+    galleryItem.classList.add('gallery-item');
+    const image = document.createElement('img');
+    image.src = artwork.imageUrl;
+    image.alt = artwork.title;
+    const title = document.createElement('h3');
+    title.textContent = artwork.title;
+    const artist = document.createElement('p');
+    artist.textContent = `By ${artwork.artist}`;
+    const price = document.createElement('p');
+    price.textContent = artwork.price;
+    galleryItem.appendChild(image);
+    galleryItem.appendChild(title);
+    galleryItem.appendChild(artist);
+    galleryItem.appendChild(price);
+    gallery.appendChild(galleryItem);
+});
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+const galleryItems = document.querySelectorAll('.gallery-item');
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase();
+    searchResults.innerHTML = '';
+    galleryItems.forEach((item) => {
+        const title = item.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+            const itemCopy = item.cloneNode(true);
+            const image = itemCopy.querySelector('img');
+            image.width = 400; 
+            image.height = 400; 
+            searchResults.appendChild(itemCopy);
+        }
+    });
+}
+document.getElementById('search-button').addEventListener('click', performSearch);
+searchInput.addEventListener('input', performSearch);
+const buyButtons = document.querySelectorAll('.buy-button');
+buyButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        window.location.href = 'shop.html';
+    });
+});
+galleryItems.forEach((item) => {
+    const title = item.querySelector('h3').textContent.toLowerCase();
+    if (title.includes(searchTerm)) {
+        const itemCopy = item.cloneNode(true);
+        const image = itemCopy.querySelector('img');
+        image.width = 400;
+        image.height = 400;
+        searchResults.appendChild(itemCopy);
+    }
+});
+</script>
+</body>
+</html>
